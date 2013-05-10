@@ -1,0 +1,37 @@
+<%= link_to 'Add a new supplier to the system', new_location_path %>
+
+<%
+  if(Location.find_by_id(Location.select("id").where(:Home => true)) && 
+    Location.find_by_id(Location.select("id").where(:Destination => true)
+    ))
+      @home = Location.find_by_id(
+      Location.select("id").where(:Home => true)).address
+      @destination = Location.find_by_id(
+      Location.select("id").where(:Destination => true)).address
+  else
+
+  end
+  
+%>
+  
+
+
+
+<br />
+<ul id="markers_list"> </ul>
+<%= gmaps('map_options' => {'auto_adjust' => "true", :zoom => 13, "center_latitude" => 56.8790044, "center_longitude" => 14.8058522},
+'markers' => {"data" => @json, "options" => {"list_container" => "markers_list"}}, "direction" => {"data" => {"from" => "#{@home}", "to" => "#{@destination}"} })%>
+
+
+
+
+<% @locations.each do |location| %>
+<br />
+  <span id="del">
+    <%= link_to 'Delete, ', location, method: :delete, data: 
+    { confirm: 'Are you sure?' } %>
+    <%= link_to 'edit', location %> or show
+  </span>
+<% end %>
+<div class="clear"></div>
+<p>Created by Viktor Axelsson using gmaps4rails gem @Ruby on Rails.</p>
