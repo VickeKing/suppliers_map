@@ -1,8 +1,8 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
-  def index
-       
+  http_basic_authenticate_with :name => "admin", :password => "admin"
+  def index      
     @locations = Location.all
     @json = Location.all.to_gmaps4rails
     respond_to do |format|

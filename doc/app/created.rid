@@ -1,0 +1,8 @@
+Mon, 13 May 2013 15:25:46 +0200
+doc/README_FOR_APP	Wed, 08 May 2013 15:53:54 +0200
+app/controllers/application_controller.rb	Wed, 08 May 2013 15:53:54 +0200
+app/controllers/locations_controller.rb	Fri, 10 May 2013 15:43:45 +0200
+app/helpers/application_helper.rb	Wed, 08 May 2013 15:53:54 +0200
+app/helpers/directs_helper.rb	Thu, 09 May 2013 18:48:25 +0200
+app/helpers/locations_helper.rb	Wed, 08 May 2013 15:55:51 +0200
+app/models/location.rb	Mon, 13 May 2013 14:15:02 +0200

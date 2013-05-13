@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510071812) do
+ActiveRecord::Schema.define(:version => 20130513115751) do
 
   create_table "directs", :force => true do |t|
     t.string   "s1"
@@ -20,19 +20,7 @@ ActiveRecord::Schema.define(:version => 20130510071812) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "locations", :force => true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.boolean  "gmaps"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "email"
-    t.integer  "phonenumber"
-    t.boolean  "Home"
-    t.boolean  "Destination"
-    t.string   "category"
-  end
+# Could not dump table "locations" because of following StandardError
+#   Unknown type 'file_field' for column 'picture'
 
 end
